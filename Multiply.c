@@ -1,11 +1,12 @@
 #include <stdio.h>
+#define MAX 50
 
 int main(void)
 {
     int r1 = 0 , c1 = 0 ,r2 = 0, c2 = 0, tmp = 0;
-    float mat1[r1][c1];
-    float mat2[r2][c2];
-    float resMat[r1][c2];
+    float mat1[MAX][MAX];
+    float mat2[MAX][MAX];
+    float resMat[MAX][MAX];
 
     printf("\nMatrix 1 :: \n");
     printf("-------------\n\n");
@@ -61,6 +62,7 @@ int main(void)
                     tmp += mat1[i][k] * mat2[k][j];
                 }
                 resMat[i][j] = tmp;
+                tmp = 0;
 
             }
         }
